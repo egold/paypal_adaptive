@@ -33,7 +33,8 @@ module PaypalAdaptive
         return "#{@paypal_base_url}/webapps/adaptivepayment/flow/pay?expType=#{type.to_s}&paykey=#{self['payKey']}"
       end
       
-      "#{@paypal_base_url}/webscr?cmd=_ap-payment&paykey=#{self['payKey']}"
+      "#{@paypal_base_url}/webscr?cmd=_express-checkout-mobile&paykey=#{self['payKey']}"
+      #"#{@paypal_base_url}/webscr?cmd=_ap-payment&paykey=#{self['payKey']}"
     end
 
     def preapproval_paypal_payment_url
